@@ -33,12 +33,13 @@ void Camera::Update()
 		m_pTransform->SetRotation(glm::rotate(m_pTransform->GetRotation(), look.y, glm::vec3(1, 0, 0)));
 		m_pTransform->SetRotation(glm::rotate(m_pTransform->GetRotation(), look.x, glm::vec3(0, 1, 0)));
 	}
-	if (INPUT->IsKeyboardKeyDown(SDL_SCANCODE_KP_4)&&m_FOV<110)
+	//if (INPUT->IsKeyboardKeyDown(SDL_SCANCODE_KP_4)&&m_FOV<110)
+	if (INPUT->IsKeyboardKeyDown('4') && m_FOV < 110)
 	{
 		m_FOV += 30.f * TIME->DeltaTime();
 		m_Moved = true;
 	}
-	if (INPUT->IsKeyboardKeyDown(SDL_SCANCODE_KP_6)&&m_FOV>5)
+	if (INPUT->IsKeyboardKeyDown('6')&&m_FOV>5)
 	{
 		m_FOV -= 30.f * TIME->DeltaTime();
 		m_Moved = true;

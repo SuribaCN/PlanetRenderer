@@ -14,7 +14,7 @@
 
 Scene::Scene()
 {
-	m_pPlanet = new Moon();
+	m_pPlanet = new Earth();
 	m_pDebugFont = new SpriteFont();
 }
 
